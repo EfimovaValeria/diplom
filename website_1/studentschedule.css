@@ -1,0 +1,235 @@
+/* Основные стили */
+html {
+    overflow-x:hidden;
+    margin: 0;
+    width: 100vw;
+  }
+ body {
+     font-family: 'Arial', sans-serif;
+     background: linear-gradient(to right, #befabe, #81c784);
+     color: #000000; /* Default text color for good readability */
+     margin: 0;
+     padding: 0px;
+ }
+ 
+ header {
+     width: 100%;
+     height: 43px; /* Высота панели */
+     background-color: #406E45;
+     padding: 20px; /* Убраны отступы для выравнивания */
+     text-align: center;
+     font-size: 25px;
+     color: white;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .logo {
+     max-width: 100px;
+     max-height: 100px;
+     margin: auto; /* Центрирование логотипа */
+ }
+ 
+ /* Контейнер и боковое меню */
+ .container {
+     display: flex;
+ }
+ 
+ .sidebar {
+     height: 100%;
+     width: 0; /* Ширина бокового меню */
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: #406E45;
+     overflow-x: hidden;
+     padding-top: 60px;
+     transition: 0.5s;
+ }
+ .submit {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .submit:hover {
+    color: #f1f1f1;
+  }
+ 
+ 
+ .sidebar a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #000000;
+     display: block;
+     transition: 0.3s;
+ }
+ 
+ .sidebar a:hover {
+     color: #f1f1f1;
+ }
+ 
+ .sidebar .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+ }
+ 
+ .openbtn {
+     font-size: 20px;
+     cursor: pointer;
+     background-color: #52a555;
+     color: white;
+     padding: 10px 15px;
+     border: none;
+ }
+ 
+ .openbtn:hover {
+     background-color: #5e8c5c;
+ }
+ 
+ #main {
+     transition: margin-left .5s;
+     padding: 20px;
+ }
+ 
+ /* Медиа-запросы */
+ @media screen and (max-height: 450px) {
+     .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+ }
+ /* Основное содержимое */
+ .main-content {
+     flex: 1;
+     padding: 20px;
+     border-radius: 5px;
+     background-color: #fff;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ .back-to-top{
+     background-color: #178044;
+     color: white;
+     border: none;
+     padding: 12px 20px; /* Consistent padding for buttons */
+     text-decoration: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .back-to-top:hover {
+     background-color: #4CAF50; /* Green on hover */
+     /*transform: translateY(-2px);*/ /* Lift effect on hover */
+  }
+  .register-btn {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1%;
+    top: 5%;
+    width: 80px;
+    height: 9px;
+    background-color: #178044;
+    color: white;
+    border: none;
+    padding: 7px 15px; /* Consistent padding for buttons */
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+ }
+ 
+ .register-btn:hover {
+    background-color: #4CAF50; /* Green on hover */
+    /*transform: translateY(-2px);*/
+ }
+ 
+ /* Стили для футера */
+ .footer {
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     background-color: #557055;
+     color: white;
+     text-align: center;
+     padding: 20px;
+     margin-top: 10px;
+     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Расписание */
+ #schedule-container {
+     background-color: rgba(0, 0, 0, 0.7);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+     color: white;
+ }
+ .date-inputs-container {
+     display: flex; /* Используем flexbox для расположения элементов */
+     justify-content: center; /* Центрируем по горизонтали */
+     gap: 3cm; /* Расстояние между элементами */
+     margin-top: 20px; /* Отступ сверху */
+ }
+ .date-input {
+     padding: 10px;
+     border: 2px solid #207c3a; /* Цвет рамки */
+     border-radius: 5px; /* Скругление углов */
+     font-size: 16px; /* Размер шрифта */
+     width: 150px; /* Ширина поля */
+     transition: border-color 0.3s ease; /* Плавный переход цвета рамки */
+ }
+ 
+ .date-input:focus {
+     outline: none; /* Убираем стандартное выделение */
+     border-color: #2a3238; /* Цвет рамки при фокусе */
+     box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Легкая тень при фокусе */
+ }
+ 
+ .date-input::placeholder {
+     color: #094872; /* Цвет текста плейсхолдера */
+ }
+ .show-schedule-btn {
+    background-color: #178044; /* Зеленый цвет фона */
+     color: white; /* Белый цвет текста */
+     border: none; /* Убираем рамку */
+     border-radius: 5px; /* Закругленные углы */
+     padding: 10px 20px; /* Отступы внутри кнопки */
+     font-size: 16px; /* Размер шрифта */
+     cursor: pointer; /* Указатель при наведении */
+     transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+     text-decoration: none;
+     display: inline-block; 
+ }
+ 
+ .show-schedule-btn:hover {
+     background-color: #218838; /* Темнее при наведении */
+ }
+ 
+ .show-schedule-btn:active {
+     background-color: #1e7e34; /* Еще темнее при нажатии */
+ }
+ #schedule-table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+ }
+ 
+ #schedule-table th, #schedule-table td {
+     padding: 10px;
+     text-align: center;
+     border: 1px solid #dddddd;
+     position: relative;
+ }
+ 

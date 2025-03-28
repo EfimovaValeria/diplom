@@ -1,0 +1,239 @@
+
+/* CSS Document */
+
+/* Global Styles */
+html {
+    overflow-x:hidden;
+    margin: 0;
+    width: 100vw;
+  }
+ 
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #444; /* Default text color for good readability */
+ }
+ 
+ header {
+    /*position: fixed;*/
+    /*display: inline-block;*/
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 50px;
+    background-color: #406E45; /* Header background color */
+    padding: 20px; /* Increased padding for more space */
+    text-align: center;
+    font-size: 25px; /* Larger font size */
+    color: white; /* Text color in header */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+ }
+ 
+ 
+ .container {
+    display: flex;
+    /*margin: 10px; */
+ }
+ 
+ .sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #406E45; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+ }
+ 
+ /* Стили навигации */
+ /* The sidebar links */
+ .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+ 
+ .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+ }
+ .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #769E77;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    /*position:absolute;
+    left: 0%;
+    top: 0%;*/
+  }
+  
+  .openbtn:hover {
+    background-color: #5e8c5c;
+  }
+ 
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+  }
+ 
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+ /* Main Content Styles */
+ .main-content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px; /* Adding rounded corners */
+    background-color: #fff; /* White background for main content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+ }
+ 
+ /* Стили кнопок */
+ /*.register-btn, .auth-btn */
+ 
+ /*.btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    right: 1%;
+    top: 7%;
+ }*/
+ 
+ /*.btn-group .button {
+    /*position:relative;/*
+    /*right: 1%;
+    top: 7%;*/
+    /*width: 80px;
+    height: 6px;
+    background-color: #178044;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Consistent padding for buttons */
+    /*text-decoration: none;
+    font-size: 12px;
+    /*border-radius: 5px;*/
+    /*cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for hover */
+    /*display: block;*//*
+ }*/
+ 
+ .auth-btn {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1%;
+    top: 1%;
+    width: 80px;
+    height: 9px;
+    background-color: #178044;
+    color: white;
+    border: none;
+    padding: 7px 15px; /* Consistent padding for buttons */
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+ }
+ 
+ .auth-btn:hover {
+    background-color: #4CAF50; /* Green on hover */
+    /*transform: translateY(-2px);*/
+ }
+ 
+ .register-btn {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1%;
+    top: 5%;
+    width: 80px;
+    height: 9px;
+    background-color: #178044;
+    color: white;
+    border: none;
+    padding: 7px 15px; /* Consistent padding for buttons */
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+ }
+ 
+ .register-btn:hover {
+    background-color: #4CAF50; /* Green on hover */
+    /*transform: translateY(-2px);*/
+ }
+ 
+ .back-to-top{
+    background-color: #178044;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Consistent padding for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+ }
+ 
+ .back-to-top:hover {
+    background-color: #4CAF50; /* Green on hover */
+    /*transform: translateY(-2px);*/ /* Lift effect on hover */
+ }
+ 
+ 
+ /* Footer Styles */
+ .footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #557055;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px; /* Space above footer */
+    /*border-radius: 5px; /* Rounded corners for footer */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Shadow for footer depth */
+ }
+ 
+ /* LOGO SRYLES*/
+ .logo {
+    /*position: absolute;*/
+    max-width: 100px;
+    max-height: 100px;
+    /*display: block;*/
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: auto;
+ }
+ 
+ ul {
+    list-style: none;
+  }
+ 
+  /*ul #reg_log {
+    float:left;
+  } */
+ 
+ 
